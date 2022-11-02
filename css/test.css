@@ -1,0 +1,333 @@
+.header {
+    top: 0;
+    background-color: #666;
+    text-align: center;
+    font-size: 30px;
+    padding: 1px;
+    height: 100px;
+    color: white;
+    margin: 0;
+    background-image: url("../images/bg/hf.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+.center{
+    margin: 0;
+    margin-top: 20px;
+    top: 50%;
+}
+.bgbody {
+  font-family: 'Poor Story', cursive;
+    background-color: black;
+    margin: 0;
+}
+
+footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 50px;
+   background-color: #666;
+   color: white;
+   text-align: center;
+   background-image: url("../images/bg/hf.svg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
+
+footer .content{
+    display: inline-flex;
+    margin-top: 20px;
+    top: 50%;
+}
+footer .right{
+  margin-right: 20px;
+  float: right;
+  margin-top: 20px;
+  top: 50%;
+}
+
+/* -------------------------------------------------srodek----------------------------------------------------- */
+/* caly panel */
+.panel {
+    width: max-content;
+    display: -webkit-flex;
+  display: flex;
+}
+/* lewa strona */
+.upgradePanel {
+    background-color: blue;
+    align-content: left;
+    width: 25%;
+}
+/* srodkowy panel */
+.gamePanel {
+    background-color: red;
+    width: 50%;
+}
+/* prawa strona */
+.rightPanel {
+    background-color: green;
+    width: 50%;
+}
+
+/* --------------------------------KLIKACZ!!!!!!!!!----------------------------------------------------------------- */
+.main-btn {
+    width:70%;
+    height: 70%;
+    margin-top: 7%;
+    background-color: transparent;
+    border: transparent;
+    animation: shake 2s infinite ;
+    position: relative;
+    
+}
+
+@keyframes shake{
+  10%{ transform: scale(1.05) rotate(5deg); }
+  20%{ transform: scale(1.05) rotate(-5deg); }
+  30%{ transform: scale(1.05) rotate(5deg); }
+  40%{ transform: none; }
+}
+
+ .clickImg {
+    width: 60%;
+    height: auto;
+ }
+
+ .clickImg:hover {
+    transform: scale(1.10) ;
+ }
+
+ .clickImg:active {
+    transform: scale(0.99) ;
+ }
+
+ .nest {
+    background-image: url("../images/gniazdo.svg");
+    background-color: #3b474cff;
+    background-size: cover;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    height: 98%;
+     margin-top: 20px;
+     text-align: center;
+ }
+  #clicker {
+    transition: all .2s ease-in-out;
+    position: relative;
+  }
+  #clicker > .number {
+    z-index: 99;
+    font-size: 36px;
+    color: whitesmoke;
+    font-weight: bold;
+    position: absolute;
+    pointer-events: none;
+
+  }
+  .unselectable {
+    -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+  }
+
+ /* -------------------------------------------Upgrades----------------------------------------------------------  */
+ .upgradeTxt {
+  height: 1%;
+  color: aliceblue;
+   text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10%;
+ }
+
+.upgrade-btn {
+  font-family: 'Poor Story', cursive;
+  box-shadow: 7px 10px 5px  rgba(1, 1, 1, 0.5);
+  background: linear-gradient(20deg, grey, #dcc8b2);
+  transform: rotate(-3deg);
+  width:99%;
+  height: 15%;
+  margin-top: 15px;
+  border-radius: 55px;
+  border : 0;
+}
+.upgrade-btn:hover {
+  transform: scale(1.04) ;
+}
+
+.upgrade-btn:active {
+  transform: scale(0.99) ;
+}
+
+.upgrade-img {
+  width: 25%;
+  height: 80%;
+  float: left;
+}
+
+.upgradeName {
+  float: left;
+  font-size: 24px;
+  color: white;
+  
+} 
+.description {
+  font-size: 16px;
+  float: left;
+}
+.upgradeLvlinfo{
+  float: left;
+  font-size: 18px;
+}
+.costInfo{
+  float: left;
+  font-size: 18px;
+}
+/* -----------------------------------------upgrades loading------------------------------------------------------ */
+.button-content{
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1026px) {
+  .loading1 {
+    display: none;
+  }
+  .saveBtn{
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .description{
+    display: none;
+  }
+  .upgrade-btn{
+    display: flex;
+  }
+  .upgradeLvlinfo{
+    display: flex;
+  }
+  .upgradeTxt{
+    display: none;
+  }
+}
+.upgrade-btn .loading1{
+  position: absolute;
+  bottom: 0;
+}
+
+.loading1{
+  align-items: flex-start;
+  text-align: center;
+  margin-left: 5%;
+  width: 94%;
+  height: 15%;
+  border: 2px solid green;
+  background-color: #666;
+  border-radius: 55px;
+  visibility: hidden;
+}
+.loading1 .line{
+  height: 100%;
+  background-image: linear-gradient(to bottom right, green, yellow);
+  border-radius: 55px;
+  animation: loading 1s forwards cubic-bezier(0,0,0,0) infinite;
+}
+.loading1 .line2{
+  height: 100%;
+  background-image: linear-gradient(to bottom right, green, yellow);
+  border-radius: 55px;
+  animation: loading 20s forwards cubic-bezier(0,0,0,0) infinite;
+}
+.loading1 .line3{
+  height: 100%;
+  background-image: linear-gradient(to bottom right, green, yellow);
+  border-radius: 55px;
+  animation: loading 60s forwards cubic-bezier(0,0,0,0) infinite;
+}
+
+@keyframes loading{
+  0%{ width: 0%;}
+  100%{width: 100%;}
+}
+ 
+/* -----------------------------------------------css------------------------------------------------------------ */
+* {
+    box-sizing: border-box;
+  }
+
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 89%; 
+    background-image: url("../images/bg/panel.svg");
+    background-size:  cover;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-color:black;
+  }
+
+  .column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 89%; 
+  }
+  .column3 {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 89%; 
+    color: aliceblue;
+    background-image: url("../images/bg/panel2.svg");
+    background-size: cover;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    background-color:black;
+    text-align: center;
+  }
+  
+  .saveBtn {
+    margin-top: 450px;
+    margin-right: 2px;
+    font-family: 'Poor Story', cursive;
+    font-size: 20px;
+    box-shadow: 7px 10px 5px  rgba(1, 1, 1, 0.5);
+    background: linear-gradient(20deg, grey, #dcc8b2);
+    width:20%;
+    height: 5%;
+    border-radius: 25px;
+    border : 0
+  }
+  .saveBtn:hover {
+    transform: scale(1.04) ;
+  }
+  
+  .saveBtn:active {
+    transform: scale(0.99) ;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .icons{
+    height: 50px;
+    width: 50px;
+    
+  }
+  .stats{
+    font-size: 30px;
+     align-items: center;
+      margin-right: 40%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
