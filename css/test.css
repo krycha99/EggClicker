@@ -193,7 +193,7 @@ footer .right{
   display: flex;
   flex-direction: column;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
   .loading1 {
     display: none;
   }
@@ -214,6 +214,20 @@ footer .right{
   }
   .upgradeTxt{
     display: none;
+  }
+  .row {
+    width: 50%;
+  }
+  .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .row {
+    width: 100%;
+  }
+  .column {
+    width: 50%;
   }
 }
 .upgrade-btn .loading1{

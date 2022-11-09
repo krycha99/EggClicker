@@ -11,9 +11,10 @@ let eggType = 1;
 let eggCap = 3;
 let eggCapInc = 3;
 const audio = new Audio("audio/click_sound.mp3");
+let muteValue = false;
 //funcs
 function add(event){
-    audio.play();
+    if(!muteValue){audio.play();}
     score = score + Math.round(upgrades.lvl[0] * cookieBonus);
     clickNumber(event);
     document.getElementById("score").innerHTML = score;
@@ -134,7 +135,7 @@ function upgradeRock(){
     }
 }
 setInterval(function() {
-    if(upgrades.lvl[2]>0){
+    if(upgrades.lvl[1]>0){
     score = score + Math.round(upgrades.earning[1] * cookieBonus);
     }
     refresh();
@@ -188,6 +189,11 @@ function bakeCookies(){
         cookies++;
         cookieBonus = cookieBonus + 0.05;
         score = 0;
+        eggCounter = 1;
+        eggType = 1;
+        eggCap = 3;
+        eggCapInc = 3;
+        sps = 0;
         upgrades.lvl = [ 1, 0, 0, 0, 0];
         upgrades.cost = [50, 200, 500, 1000, 0];
         upgrades.earning = [0, 0, 0, 0, 0];
@@ -251,6 +257,11 @@ function load() {
             upgrades.earning[i] = saveFile.upgradesearning[i];
             upgrades.yolkEarning[i] = saveFile.upgradesYolkearning[i];
         }
+        for (i=1; i< 4; i++){
+            if(upgrades.lvl[i] >0){
+                document.getElementById("l" + (i+1)).style.visibility = "visible";
+            }
+        }
     }
     
     let img = document.getElementById("egg-img");
@@ -286,3 +297,12 @@ function reset(){
         location.reload();
     }
 }
+
+//-------------------------------mute
+function mute(){
+    muteValue = isMuted(muteValue);
+}
+function isMuted(muteValue) {
+    return (muteValue ? false : true);
+  }
+  
