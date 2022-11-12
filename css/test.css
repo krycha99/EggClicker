@@ -182,12 +182,12 @@ footer .right{
 } 
 .description {
   flex-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 14px;
   float: left;
 }
 .upgradeLvlinfo{
   float: left;
-  font-size: 18px;
+  font-size: 14px;
 }
 .upgradeLvlinfo2{
   float: left;
