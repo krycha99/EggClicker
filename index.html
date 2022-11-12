@@ -32,6 +32,7 @@
                   <br></br>
                   <div class="description">Increase cursor amount</div> <br>
                   <div class="upgradeLvlinfo">lvl: <b>[<span id="cursorLvl">15</span>]</b> Next upgrade: -<b><span id="cursorCost">0</span></b> score</div>
+                  <div class="upgradeLvlinfo2"> <b>[<span id="cursorLvl">15</span>]</b> -<b><span id="cursorCost">0</span></b> score</div>
                 </div>
             </button>
 
@@ -42,6 +43,7 @@
                     <br></br>
                     <div class="description">Rock smashes the egg every sec</div> <br>
                     <div class="upgradeLvlinfo">lvl: <b>[<span id="rockLvl">15</span>]</b> Next upgrade: -<b><span id="rockCost">0</span></b> score</div>
+                    <div class="upgradeLvlinfo2"> <b>[<span id="rockLvl">15</span>]</b> -<b><span id="rockCost">0</span></b> score</div>
                 </div>
                 <div class="loading1" id="l2"><div class="line"></div></div>
             </button>
@@ -53,6 +55,7 @@
                     <br></br>
                     <div class="description">Heavy hammer smashes egg every 20 sec</div> <br>
                     <div class="upgradeLvlinfo">lvl: <b>[<span id="hammerLvl">15</span>]</b> Next upgrade: -<b><span id="hammerCost">0</span></b> score</div>
+                    <div class="upgradeLvlinfo2"> <b>[<span id="hammerLvl">15</span>]</b> -<b><span id="hammerCost">0</span></b> score</div>
                 </div>
                 <div class="loading1" id="l3"><div class="line2"></div></div>
             </button>
@@ -64,6 +67,7 @@
                     <br></br>
                     <div class="description">Gives score per min and additional yolk </div> <br>
                     <div class="upgradeLvlinfo">lvl: <b>[<span id="ebLvl">15</span>]</b> Next upgrade: -<b><span id="ebCost">0</span></b> score</div>
+                    <div class="upgradeLvlinfo2"> <b>[<span id="ebLvl">15</span>]</b> -<b><span id="ebCost">0</span></b> score</div>
                 </div>
                 <div class="loading1" id="l4"><div class="line3"></div></div>
             </button>
@@ -75,6 +79,7 @@
                     <br></br>
                     <div class="description">Bake cookie from your yolks!</div> <br>
                     <div class="upgradeLvlinfo">lvl: <b>[<span id="cookies">15</span>]</b> Next upgrade: -<b><span id="bakeCost">0</span></b> yolks</div>
+                    <div class="upgradeLvlinfo2"> <b>[<span id="cookies">15</span>]</b> -<b><span id="bakeCost">0</span></b> score</div>
                 </div>
                 </button>
             </div>
@@ -88,19 +93,21 @@
             <div class="column3">
                 <div class="stats">
                     <img src="images/yolk.svg" class="icons">
-                    <span  style="position: absolute; margin-top: 5px;"><b> Yolks: <span id="yolks">0</span></b></span>
+                    <span ></span><b> Yolks: <span style="margin-left: 27%;" id="yolks">0</span></b>
                 </div>
                 <div class="stats">
                     <img src="images/upgrades/cookie.svg" class="icons">
-                    <span  style="position: absolute; margin-top: 5px;"><b> Cookies: <span id="cookiesR">0</span></b></span>
+                    <span></span><b> Cookies: <span style="margin-left: 31%;" id="cookiesR">0</span></b>
                 </div>
-                <div class="stats">
-                    <span style="position: absolute; margin-top: 5px; margin-right: 10px;"><b> Score per sec: </b></span>
-                    <br><br>
-                    <span style="margin-left: 130px;" id="sps"><b>0</b></span>
+                <div class="stats" style="margin-left: 25%;">
+                    <b style="margin-left: 5%;"> Score per sec: </b>
+                    <span style="margin-left: 16%;" id="sps"><b>0</b></span>
                 </div>
-            <button class="saveBtn" onclick="save()"><b>Save</b></button>
-            <button class="saveBtn" onclick="load()"><b>Load</b></button>
+                <div class="btnDiv" >
+                    <button class="saveBtn" onclick="save()"><b>Save</b></button>
+                    <button class="saveBtn"  onclick="load()"><b>Load</b></button>
+                </div>
+            
             </div>
         </div>
      </main>   

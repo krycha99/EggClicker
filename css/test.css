@@ -109,9 +109,10 @@ footer .right{
     background-color: #3b474cff;
     background-size: cover;
     background-position: 70%;
+    margin-right: 5px;
     background-repeat: no-repeat;
+    width:100%;
     height: 98%;
-     margin-top: 20px;
      text-align: center;
  }
   #clicker {
@@ -156,6 +157,9 @@ footer .right{
   border-radius: 55px;
   border : 0;
 }
+.upgrade-btn div {
+ flex-wrap: wrap;
+}
 .upgrade-btn:hover {
   transform: scale(1.04) ;
 }
@@ -177,12 +181,17 @@ footer .right{
   
 } 
 .description {
-  font-size: 16px;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
   float: left;
 }
 .upgradeLvlinfo{
   float: left;
   font-size: 18px;
+}
+.upgradeLvlinfo2{
+  float: left;
+  display: none;
 }
 .costInfo{
   float: left;
@@ -197,9 +206,9 @@ footer .right{
   .loading1 {
     display: none;
   }
-  .saveBtn{
+  /* .saveBtn{
     display: none;
-  }
+  } */
   .hide {
     display: none;
   }
@@ -209,17 +218,29 @@ footer .right{
   .upgrade-btn{
     display: flex;
   }
+  .upgrade-btn br{
+    display: none;
+  }
   .upgradeLvlinfo{
-    display: flex;
+    display: none;
+  }
+  .upgradeLvlinfo2{
+    display: initial;
   }
   .upgradeTxt{
     display: none;
   }
-  .row {
+  /* .row {
     width: 50%;
-  }
+  } */
   .column {
     width: 50%;
+  }
+  .nest{
+    height:  89%;
+  }
+  .description {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
@@ -271,11 +292,9 @@ footer .right{
 }
  
 /* -----------------------------------------------css------------------------------------------------------------ */
-* {
-    box-sizing: border-box;
-  }
 
   .column {
+    flex-wrap: wrap;
     float: left;
     width: 30%;
     padding: 10px;
@@ -294,27 +313,28 @@ footer .right{
     height: 89%; 
   }
   .column3 {
-    float: left;
+    margin-top: -0.1rem;
+    flex-wrap: wrap;
+    float:right;
     width: 20%;
-    padding: 10px;
     height: 89%; 
     color: aliceblue;
     background-image: url("../images/bg/panel2.svg");
     background-size: cover;
-    background-position: 70%;
     background-repeat: no-repeat;
     background-color:black;
-    text-align: center;
+    background-position: 0.2rem;
+    justify-content: center;
   }
   
   .saveBtn {
-    margin-top: 450px;
+    margin-top: .8rem;
     margin-right: 2px;
     font-family: 'Poor Story', cursive;
     font-size: 20px;
     box-shadow: 7px 10px 5px  rgba(1, 1, 1, 0.5);
     background: linear-gradient(20deg, grey, #dcc8b2);
-    width:20%;
+    width:4.5rem;
     height: 5%;
     border-radius: 25px;
     border : 0
@@ -328,8 +348,7 @@ footer .right{
   }
 
   .row:after {
-    content: "";
-    display: table;
+    display: flexbox;
     clear: both;
   }
 
@@ -338,10 +357,30 @@ footer .right{
     width: 50px;
     
   }
+  .column3 div {
+    justify-content: center;
+    margin-left: 25%;
+  }
+  .column3 button{
+    position: relative;
+  }
+  .column3 .btnDiv{
+    margin-left: 23%;
+    margin-top: 5%;
+    position: static;
+  }
+  .column3 span{
+    justify-content: center;
+  }
   .stats{
-    font-size: 30px;
-     align-items: center;
-      margin-right: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-right: 25%;
+    font-size: 1.7rem;
       margin-top: 5%;
-      margin-bottom: 5%;
+  }
+
+  * {
+    box-sizing: border-box;
   }
